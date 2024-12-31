@@ -21,11 +21,11 @@ This project implements the seam carving algorithm using C. The implementation i
 
 ### 1. Dual-Gradient Energy Calculation
 The function `calc_energy()` computes the energy of each pixel using the dual-gradient energy function:
-\[
+$$
 \text{Energy}(y, x) = \sqrt{\Delta^2_x(y, x) + \Delta^2_y(y, x)}
-\]
+$$
 Where:
-- \( \Delta^2_x \) and \( \Delta^2_y \) are the squared color gradients along the x and y axes.
+- $\Delta^2_x$ and $\Delta^2_y$ are the squared color gradients along the x and y axes.
 - Wrapping around the edges is handled to ensure seamless calculations.
 
 The computed energy values are stored in a grayscale image, where higher energy pixels are brighter.
@@ -66,8 +66,8 @@ The function `remove_seam()` removes the identified seam from the image, creatin
 ## Example
 
 Given an input image `HJoceanSmall.bin`, the program can remove seams iteratively:
-- Input Image: \( 505 \times 287 \)
-- Output Image (after 150 vertical seams): \( 355 \times 287 \)
+- Input Image: $505 \times 287$
+- Output Image (after 150 vertical seams): $355 \times 287$
 
 ---
 
