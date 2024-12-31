@@ -45,39 +45,6 @@ The function `remove_seam()` removes the identified seam from the image, creatin
 
 ---
 
-## How to Run
-
-1. **Compilation**: Compile the program with the command:
-   ```bash
-   gcc -o seam_carving seamcarving.c -lm
-   ```
-
-2. **Execution**: Run the program using the test harness provided in the `main()` function. For example:
-   ```bash
-   ./seam_carving
-   ```
-
-3. **Input/Output**: The program reads binary image files (`.bin`) and writes resized binary images after removing seams.
-
----
-
-## Example
-
-Given an input image `HJoceanSmall.bin`, the program can remove seams iteratively:
-- Input Image: $505 \times 287$
-- Output Image (after 150 vertical seams): $355 \times 287$
-
----
-
-## Files
-
-- **`seamcarving.c`**: Implements all core functions.
-- **`seamcarving.h`**: Header file defining function prototypes.
-- **`rgb_img.h`**: Utility functions for image handling (e.g., reading/writing binary images).
-- **`main.c`**: Sample program demonstrating iterative seam removal.
-
----
-
 ## Additional Notes
 
 - **Optimization**: The implementation leverages dynamic programming for efficient seam identification and removal.
