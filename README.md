@@ -21,9 +21,7 @@ This project implements the seam carving algorithm using C. The implementation i
 
 ### 1. Dual-Gradient Energy Calculation
 The function `calc_energy()` computes the energy of each pixel using the dual-gradient energy function:
-$$
-\text{Energy}(y, x) = \sqrt{\Delta^2_x(y, x) + \Delta^2_y(y, x)}
-$$
+$$\text{Energy}(y, x) = \sqrt{\Delta^2_x(y, x) + \Delta^2_y(y, x)}$$
 Where:
 - $\Delta^2_x$ and $\Delta^2_y$ are the squared color gradients along the x and y axes.
 - Wrapping around the edges is handled to ensure seamless calculations.
@@ -33,7 +31,7 @@ The computed energy values are stored in a grayscale image, where higher energy 
 ---
 
 ### 2. Dynamic Seam Identification
-The function `dynamic_seam()` constructs a dynamic programming table to compute the minimum cumulative energy for seams from the top to the current row. This table enables efficient seam identification with \( O(H \times W) \) time complexity, where \( H \) is the height and \( W \) is the width of the image.
+The function `dynamic_seam()` constructs a dynamic programming table to compute the minimum cumulative energy for seams from the top to the current row. This table enables efficient seam identification with $O(H \times W)$ time complexity, where $H$ is the height and $W$ is the width of the image.
 
 ---
 
